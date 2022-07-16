@@ -1,6 +1,6 @@
 {
   "short_name": "WAKER©",
   "name": "WAKER©",
-  "display": "fullscreen"
+  "display": "standalone"
   "orientation": "landscape"
 }
