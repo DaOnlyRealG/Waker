@@ -11,26 +11,22 @@ html, body {
 /* --- FONTS --- */
 @font-face {
     font-family: RobotoRegular;
-    src: url(waker/assets/fonts/Roboto/Roboto-Regular.ttf);
+    src: url(Roboto-Regular.ttf);
 }
 @font-face {
     font-family: RobotoItalic;
-    src: url(../fonts/Roboto/Roboto-Italic.ttf);
+    src: url(Roboto-Italic.ttf);
 }
 @font-face {
     font-family: RobotoBold;
-    src: url(https://daonlyrealg.github.io/waker/assets/fonts/Roboto/Roboto-Bold.ttf);
-}
-@font-face {
-    font-family: Weatheeer;
-    src: url(https://daonlyrealg.github.io/waker/assets/fonts/Weatheeer/Weatheeer-Regular.ttf);
+    src: url(Roboto-Bold.ttf);
 }
 
 
 .background {
     height: 100vh;
     width: 100vw;
-    background: url(../../clock_setup/background.jpg) no-repeat center center fixed; 
+    background: url(background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
