@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="assets/css/main.css">
+        <script src="assets/js/main.js"></script>
+
+        <link rel="shortcut icon" href="assets/icons/favicon256.ico">
+        <link rel="apple-touch-icon" href="assets/icons/ios-icon.png"/>
+        <meta name="description" content="WAKER® will be your new wake up alarm with lots of customization and the perfect style when you sleep"/>
+
+        <title>WAKER®</title>
+
+    </head>
+    <body onload="startTime();setFunc();showSwitchFunc();showIconFunc()">
+        <div class="background"></div>
+        <div id="main">
+
+            <div class="widget">
+                <div class="weather">
+                    <span id="city"></span>
+                    <span id="temp"></span>
+                    <span id="icon"></span>
+                </div>
+            </div>
+
+
+            <div class="clock" id="time"></div>
+
+            <input class="apple-switch" type="checkbox" onclick="darkmode()" id="switch">
+        </div>
+        
+    </body>
+</html>
