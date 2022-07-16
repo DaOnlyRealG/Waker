@@ -3,7 +3,7 @@
 // Put the city of your choice between the apostrophes  
 let city = 'New York'
 
-let showSwitch = false
+let showSwitch = true
 // The Switch is only usefull if you are on a touchscreen and you don't have a night time so I recommend you to hide it
 
 let showIcon = false
