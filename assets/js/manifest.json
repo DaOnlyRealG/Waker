@@ -1,5 +1,6 @@
 {
-  "short_name": "Gaspard LB",
-  "name": "Gaspard LB's portfolio",
-  "display": "standalone"
+  "short_name": "WAKER©",
+  "name": "WAKER©",
+  "display": "fullscreen"
+  "orientation": "landscape"
 }
