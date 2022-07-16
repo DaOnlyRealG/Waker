@@ -1,7 +1,7 @@
 // Clock Setup
 
 // Put the city of your choice between the apostrophes  
-let city = 'Wattignies'
+let city = 'New York'
 
 let showSwitch = false
 // The Switch is only usefull if you are on a touchscreen and you don't have a night time so I recommend you to hide it
