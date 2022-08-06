@@ -118,6 +118,7 @@ aspect-ratio: 5 / 3;
 background-color: transparent; 
 border: 1px solid #D9DADC;
 border-radius: 50px; 
+margin: 2%;
 }
 
 input.apple-switch:after {
