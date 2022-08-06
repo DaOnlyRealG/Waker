@@ -127,11 +127,6 @@ function checkTime(i) {
 
 // Weather Function 
 
-function setFunc() {
-  getData();
-  setTimeout(setFunc, 60000);
-}
-
 function getData(value) {
   fetch('https://api.openweathermap.org/data/2.5/weather?q='+value+'&appid=7d80c26b1809f3e46ec69871ca7a8da2')
   .then(function (response) {
