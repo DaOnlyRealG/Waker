@@ -1,7 +1,5 @@
 // Clock Setup
 
-// Put the city of your choice between the apostrophes  
-let city = 'New York'
 
 let showSwitch = true
 // The Switch is only usefull if you are on a touchscreen and you don't have a night time so I recommend you to hide it
@@ -46,6 +44,37 @@ let nightmode = false;
 
 console.log('Website succesfully loaded ! made by %cGaspardLB', 'color: black;background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);font-family: Helvetica; padding: 10px; font-size: 15px; font-weight: 600; border-radius: 10px ');
 console.log('Checkout my website : https://gaspard-lb.web.app/')
+
+
+// Geolocation 
+
+const succesCallback = (position) => {
+  console.log(position);
+
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+
+  console.log(latitude + ' ' + longitude)
+
+  const geoApiUrl = 'https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en'
+
+  fetch(geoApiUrl)
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+    let city = data.city + ', ' + data.countryName
+    console.log(data.city + ', ' + data.countryName)
+    getData(city) 
+  })
+  setTimeout(succesCallback, 60000);
+};
+
+const errorCallback = (error) => {
+  console.error(error);
+}
+
+navigator.geolocation.getCurrentPosition(succesCallback, errorCallback);
+
 
 // Darkmode Function
 
@@ -104,7 +133,7 @@ function setFunc() {
 }
 
 function getData(value) {
-  fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=7d80c26b1809f3e46ec69871ca7a8da2')
+  fetch('https://api.openweathermap.org/data/2.5/weather?q='+value+'&appid=7d80c26b1809f3e46ec69871ca7a8da2')
   .then(function (response) {
     return response.json();
   })
