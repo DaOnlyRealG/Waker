@@ -55,14 +55,15 @@ const succesCallback = (position) => {
   const longitude = position.coords.longitude;
 
   console.log(latitude + ' ' + longitude)
+  console.log('Check your location here : https://www.google.com/maps/search/' + latitude + '+' + longitude);
 
-  const geoApiUrl = 'https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en'
+  const geoApiUrl = 'https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=' + latitude + '&longitude=' + longitude + '&localityLanguage=en'
 
   fetch(geoApiUrl)
   .then(res => res.json())
   .then(data => {
     console.log(data)
-    let city = data.city + ', ' + data.countryName
+    let city = data.locality + ', ' + data.countryName
     console.log(data.city + ', ' + data.countryName)
     getData(city) 
   })
